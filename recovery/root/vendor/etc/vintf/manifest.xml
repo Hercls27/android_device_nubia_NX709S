@@ -1,13 +1,6 @@
 <!--
     Input:
         manifest_taro.xml
-        netutil.xml
-        rttutil.xml
-        asus_hostapd.xml
-        sla.xml
-        glovemode.xml
-        zenmotion.xml
-        asusgeneral.xml
 -->
 <manifest version="4.0" type="device" target-level="6">
     <hal format="hidl">
@@ -29,6 +22,16 @@
             <instance>default</instance>
         </interface>
         <fqname>@7.0::IEffectsFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.biometrics.fingerprint</name>
+        <transport>hwbinder</transport>
+        <version>2.1</version>
+        <interface>
+            <name>IBiometricsFingerprint</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@2.1::IBiometricsFingerprint/default</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.bluetooth</name>
@@ -131,10 +134,8 @@
         <interface>
             <name>ISecureElement</name>
             <instance>SIM1</instance>
-            <instance>SIM2</instance>
         </interface>
         <fqname>@1.2::ISecureElement/SIM1</fqname>
-        <fqname>@1.2::ISecureElement/SIM2</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.tetheroffload.config</name>
@@ -155,16 +156,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.1::IOffloadControl/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>com.dsi.ant</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IAnt</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IAnt/default</fqname>
     </hal>
     <hal format="hidl">
         <name>com.qualcomm.qti.dpm.api</name>
@@ -197,36 +188,6 @@
         <fqname>@2.3::IUceService/com.qualcomm.qti.uceservice</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.asus.wifi.hostapd</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IAsusHostapd</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IAsusHostapd/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.asus.wifi.netutil</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>IWifiNetUtil</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.1::IWifiNetUtil/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.asus.wifi.rttutil</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IWifiRttUtil</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IWifiRttUtil/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.goodix.hardware.biometrics.fingerprint</name>
         <transport>hwbinder</transport>
         <version>2.1</version>
@@ -237,54 +198,14 @@
         <fqname>@2.1::IGoodixFingerprintDaemon/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.ims.asusgeneralhidl</name>
+        <name>vendor.nubia.ifaa</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IAsusGeneralHIDLE</name>
+            <name>IIfaa</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::IAsusGeneralHIDLE/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.ims.glovemode</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IGloveMode</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IGloveMode/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.ims.zenmotion</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IZenMotion</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IZenMotion/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.nxp.nxpnfc</name>
-        <transport>hwbinder</transport>
-        <version>2.0</version>
-        <interface>
-            <name>INxpNfc</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@2.0::INxpNfc/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.nxp.nxpnfclegacy</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>INxpNfcLegacy</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::INxpNfcLegacy/default</fqname>
+        <fqname>@1.0::IIfaa/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.data.factory</name>
@@ -295,16 +216,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@2.5::IFactory/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.esepowermanager</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>IEsePowerManager</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.1::IEsePowerManager/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.AGMIPC</name>
@@ -461,6 +372,16 @@
         <fqname>@1.0::IEid/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>vendor.qti.hardware.embmssl</name>
+        <transport>hwbinder</transport>
+        <version>1.1</version>
+        <interface>
+            <name>IEmbms</name>
+            <instance>embmsslServer0</instance>
+        </interface>
+        <fqname>@1.1::IEmbms/embmsslServer0</fqname>
+    </hal>
+    <hal format="hidl">
         <name>vendor.qti.hardware.factory</name>
         <transport>hwbinder</transport>
         <version>1.1</version>
@@ -469,6 +390,16 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.1::IFactory/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.fm</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IFmHci</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IFmHci/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.iop</name>
@@ -499,16 +430,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IPAL/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.hardware.qccvndhal</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IQccvndhal</name>
-            <instance>qccvndhal</instance>
-        </interface>
-        <fqname>@1.0::IQccvndhal/qccvndhal</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.qseecom</name>
@@ -775,16 +696,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::IQspmhal/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.qti.sla.service</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISlaService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISlaService/default</fqname>
     </hal>
     <sepolicy>
         <version>32.0</version>
